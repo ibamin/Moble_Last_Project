@@ -11,8 +11,8 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class MailSender extends javax.mail.Authenticator{
-    private String fromEmail = "nk2sp0925@gmail.com"; //gmail
-    private String password = "qtxc vpmv xvgz ednt"; // gmail 2차 비밀번호 16자리
+    private String fromEmail = ""; //gmail
+    private String password = ""; // gmail 2차 비밀번호 16자리
 
     public PasswordAuthentication getPasswordAuthentication() {
         return new PasswordAuthentication(fromEmail, password);
