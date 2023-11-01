@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_ocrd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="정보 수정"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ocr_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="5dp"
+                android:text="이름"
+                android:textColor="#919191"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/etv_ocrresult_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="name"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ocr_mw"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="5dp"
+                android:text="성별"
+                android:textColor="#919191"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/etv_ocrresult_gender"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="gender"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_ocr_Num"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingLeft="5dp"
+            android:text="주민번호"
+            android:textColor="#919191"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/etv_ocrresult_num"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:hint="num6-num7"
+            android:inputType="text"
+            android:paddingLeft="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_ocr_ca"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:paddingLeft="5dp"
+                android:text="인증기관"
+                android:textColor="#919191"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/etv_ocrresult_ca"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="institution"
+                android:inputType="text"
+                android:paddingLeft="5dp"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
