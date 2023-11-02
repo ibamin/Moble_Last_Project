@@ -19,8 +19,7 @@ public class MainActivity9 extends AppCompatActivity {
     RecyclerView recyclerView;
     Test_AlarmAdapter t_aAdapter;
     List<Test_Alarm> t_aDatas;
-    ImageButton apBack;
-    Button F5;
+    ImageButton apBack, F5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +27,7 @@ public class MainActivity9 extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);//다크모드 삭제
 
         apBack = findViewById(R.id.ibtn_apBack);
-        F5 = findViewById(R.id.btn_f5);
+        F5 = findViewById(R.id.ibtn_f5);
         recyclerView = findViewById(R.id.list_rv);
         t_aDatas = new ArrayList<>();
         apBack.setOnClickListener(new View.OnClickListener() {
