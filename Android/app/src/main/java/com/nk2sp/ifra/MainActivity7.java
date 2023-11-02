@@ -82,8 +82,9 @@ public class MainActivity7 extends AppCompatActivity {
         calendarview.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                // 선택된 날짜 정보를 가지고 원하는 동작 수행
-                String senddate = Integer.toString(year) + "-" + Integer.toString(month + 1) + "-" + Integer.toString(dayOfMonth) ;
+                //선택된 날짜 정보를 가지고 원하는 동작 수행
+                //String senddate = Integer.toString(year) + "-" + Integer.toString(month + 1) + "-" + Integer.toString(dayOfMonth) ;
+                String senddate = Integer.toString(year) + "-" + String.format("%02d", month + 1) + "-" + String.format("%02d", dayOfMonth);
                 selectedDate = year + "년 " + (month + 1) + "월 " + dayOfMonth + "일 ";
                 S_Date.setText(selectedDate);
                 if (!ML_Datas.isEmpty()) {ML_Datas.clear();}
@@ -175,7 +176,8 @@ public class MainActivity7 extends AppCompatActivity {
         //String dateString = "Wed, 18 Oct 2023 09:10:00 GMT";
         String dateString = time_data;
         String Result = null;
-        SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z", Locale.ENGLISH);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss", Locale.ENGLISH);
+
 
         try {
             if (dateString != null && !dateString.isEmpty()) {
