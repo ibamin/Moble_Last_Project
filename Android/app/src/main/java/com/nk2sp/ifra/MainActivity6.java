@@ -40,8 +40,8 @@ public class MainActivity6 extends AppCompatActivity {
     Spinner S_Grp;
     String E_Grp;
     TextView tv_Name, tv_name, tv_id, tv_pw, tv_grp, tv_pnum;
-    EditText E_Name, E_ID, E_PW, E_PNum;
-    String name, id, pw, grp, grp_num, pnum, old_id;
+    EditText E_Name, E_PNum;
+    String name, id, pw, grp, grp_num, pnum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,10 +82,10 @@ public class MainActivity6 extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                showEditableDialog(this, name, id, pw, grp, pnum,
+                showEditableDialog(this, name, grp, pnum,
                         new MainActivity6.OnValuesEditedListener() {
                             @Override
-                            public void onValues_Edited(String editedName, String editedId, String editedPW, String editedGroup, String editedPnum) {
+                            public void onValues_Edited(String editedName, String editedGroup, String editedPnum) {
                                 // 사용자가 수정한 값을 사용
                                 // 이곳에서 수정된 값을 사용하거나 처리
                                 Toast.makeText(MainActivity6.this, "수정완료 ", Toast.LENGTH_SHORT).show();
@@ -107,7 +107,7 @@ public class MainActivity6 extends AppCompatActivity {
         pw = mydata.getUser_pass();
         if (mydata.getUser_group().equals("1")){grp = "Class C";}
         else if (mydata.getUser_group().equals("2")) {grp = "Class Java";}
-        else if (mydata.getUser_group().equals("")) {grp = "none";}
+        else if (mydata.getUser_group().equals("")||mydata.getUser_group().equals("null")) {grp = "none";}
         else {grp = mydata.getUser_group();}
         pnum = mydata.getUser_phoneNum();
         if (pnum.length() == 11) { //자리수 11개일씨 - 추가
@@ -125,22 +125,15 @@ public class MainActivity6 extends AppCompatActivity {
         String maskedText = new String(new char[length]).replace("\0", "*"); // 길이만큼 '*'로 채운 문자열 생성
         tv_pw.setText(maskedText);
     }
-    public void showEditableDialog(View.OnClickListener context, String edName, String edID, //v2
-                                   String edPW, String edGroup, String edPNum, final MainActivity6.OnValuesEditedListener listener) {
+    public void showEditableDialog(View.OnClickListener context, String edName, //v2
+                                   String edGroup, String edPNum, final MainActivity6.OnValuesEditedListener listener) {
         LayoutInflater inflater = LayoutInflater.from(this);
         View viewV1 = inflater.inflate(R.layout.activity_6_mypage_edit, null);
         E_Name = viewV1.findViewById(R.id.etv_mypage_ename);
-        E_Name.setText(edName);
+        E_Name.setText(edName); //이름
 
-        E_ID = viewV1.findViewById(R.id.etv_mypage_eID);
-        E_ID.setText(edID);
-
-        E_PW = viewV1.findViewById(R.id.etv_mypage_ePW);
-        edPW = ""; //해쉬처리한 비번은 복호화를 못하므로 아예 초기화
-        E_PW.setText(edPW);
-
-        S_Grp = viewV1.findViewById(R.id.sp_mypage_grp);
-        String[] options = {"Class C", "Class Java", "미정"}; //1, 2, 3
+        S_Grp = viewV1.findViewById(R.id.sp_mypage_grp); //그룹
+        String[] options = {"미정","Class C", "Class Java"}; //1, 2, 3
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, options);
         S_Grp.setAdapter(adapter);
         S_Grp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -168,14 +161,10 @@ public class MainActivity6 extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         // 사용자가 수정한 값을 가져옵니다.
                         mydata.setUser_name(E_Name.getText().toString());
-                        mydata.setUser_id(E_ID.getText().toString());
-                        mydata.setUser_pass(E_PW.getText().toString());
                         mydata.setUser_group(E_Grp);
                         mydata.setUser_phoneNum(E_PNum.getText().toString());
 
                         name = mydata.getUser_name();
-                        id = mydata.getUser_id();
-                        pw = mydata.getUser_pass();
                         grp = mydata.getUser_group();
                         pnum = mydata.getUser_phoneNum();
                         if (pnum.length() == 11) {
@@ -183,7 +172,7 @@ public class MainActivity6 extends AppCompatActivity {
                         }
 
                         if (listener != null) {
-                            listener.onValues_Edited(name, id, pw, grp, pnum);
+                            listener.onValues_Edited(name, grp, pnum);
                             Send2_edinfo(); // 수정한 정보 업데이트
                             finish();
                             startActivity(getIntent());
@@ -200,7 +189,7 @@ public class MainActivity6 extends AppCompatActivity {
                 .show(); //다이얼로그 표시
     }
     public interface OnValuesEditedListener {
-        void onValues_Edited(String editedName, String editedId, String editedPW, String editedGroup, String editedPnum);
+        void onValues_Edited(String editedName, String editedGroup, String editedPnum);
     }
     private void Confirmation() {
         //안내문자서 확인 클릭시
@@ -211,16 +200,13 @@ public class MainActivity6 extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), "취소하였습니다.", Toast.LENGTH_SHORT).show();
     }
     public void Send2_edinfo() { //정보수정(서버로 보내기)
-        if (old_id == null) {old_id = id;}
         if (grp.equals("Class C")) { grp_num = "1";}
         else if (grp.equals("Class Java")) { grp_num = "2";}
         else {grp_num = "none";}
         RequestBody requestBody = new MultipartBody.Builder()
                 .setType(MultipartBody.FORM)
-                .addFormDataPart("old_id",old_id)//이전 아이디
+                .addFormDataPart("id",id)//아이디
                 .addFormDataPart("name",name) //이름
-                .addFormDataPart("id",id) //아이디
-                .addFormDataPart("pw",pw) //비번
                 .addFormDataPart("group",grp_num) //그룹 번호 1:Class C, 2:Class Java
                 .addFormDataPart("pnum",pnum) //폰넘
                 .build();
