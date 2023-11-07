@@ -215,7 +215,7 @@ public class MainActivity8 extends AppCompatActivity {
         //String dateString = "Wed, 18 Oct 2023 09:10:00 GMT";
         String dateString = time_data;
         String Result = null;
-        SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z", Locale.ENGLISH);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss", Locale.ENGLISH);
 
         try {
             if (dateString != null && !dateString.isEmpty()) {

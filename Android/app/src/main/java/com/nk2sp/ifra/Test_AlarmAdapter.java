@@ -40,12 +40,12 @@ public class Test_AlarmAdapter extends RecyclerView.Adapter<Test_AlarmAdapter.Bo
                 LayoutInflater inflater = LayoutInflater.from(holder.itemView.getContext());
                 View dialogView = inflater.inflate(R.layout.activity_9_test_nf_picture, null);
 
-                ImageView imageView = dialogView.findViewById(R.id.im_NF); // 이미지뷰
+                ImageView imageView = dialogView.findViewById(R.id.im_NF); //imageView
                 Random rand = new Random();
                 int num = rand.nextInt(3);
-                if (num == 0){imageView.setImageResource(R.drawable.op1);}
-                else if (num == 1) {imageView.setImageResource(R.drawable.op2);}
-                else{imageView.setImageResource(R.drawable.op3);}
+                if (num == 0){imageView.setImageResource(R.drawable.op5);} //1
+                else if (num == 1) {imageView.setImageResource(R.drawable.op5);} //2
+                else{imageView.setImageResource(R.drawable.op5);} //3
                 builder.setView(dialogView)
                         .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
@@ -77,4 +77,3 @@ public class Test_AlarmAdapter extends RecyclerView.Adapter<Test_AlarmAdapter.Bo
         }
     }
 }
-

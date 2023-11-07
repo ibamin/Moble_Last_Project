@@ -42,75 +42,9 @@
             <EditText
                 android:id="@+id/etv_mypage_ename"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:ems="10"
                 android:hint="name"
-                android:inputType="text"
-                android:paddingLeft="5dp"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="17dp"
-        android:orientation="horizontal"></LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_mypage_eID"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:paddingLeft="5dp"
-                android:text="아이디"
-                android:textColor="#919191"
-                android:textSize="15dp" />
-
-            <EditText
-                android:id="@+id/etv_mypage_eID"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="id"
-                android:inputType="text"
-                android:paddingLeft="5dp"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_mypage_ePW"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:paddingLeft="5dp"
-                android:text="비밀번호"
-                android:textColor="#919191"
-                android:textSize="15dp" />
-
-            <EditText
-                android:id="@+id/etv_mypage_ePW"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="password"
                 android:inputType="text"
                 android:paddingLeft="5dp"
                 android:textSize="20dp"
@@ -169,7 +103,7 @@
             <EditText
                 android:id="@+id/etv_mypage_ePNum"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:ems="10"
                 android:hint="n3-n4-n4"
                 android:inputType="text"
