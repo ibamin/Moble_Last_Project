@@ -77,3 +77,7 @@ Free tier에서 사용가능한 최대한의 사용을 했다
 | Motor | 2개 |
 | cooler | 2개 |
 | Touch Pannel | 1개 |
+
+### 회로도
+<img src="/readme/RP1.jpg"></img>
+<img src="/readme/RP2.jpg"></img>
