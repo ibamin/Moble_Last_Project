@@ -79,5 +79,18 @@ Free tier에서 사용가능한 최대한의 사용을 했다
 | Touch Pannel | 1개 |
 
 ### 회로도
-<img src="/readme/RP1.jpg"></img>
-<img src="/readme/RP2.jpg"></img>
+
+#### Raspberry 1
+
+<img src="/readme/RP1.png"></img>
+
+#### Raspberry 2
+
+<img src="/readme/RP2.png"></img>
+
+
+--------------------------------------------------------------------------
+
+## AI
+
+사용 모델 : ResNet
