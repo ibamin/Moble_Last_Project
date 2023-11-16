@@ -74,11 +74,7 @@ Free tier에서 사용가능한 최대한의 사용을 했다
 | Rsapberry Pi | 2개 |
 | ------------ | -- |
 | Camera Module | 1개 |
-| ------------ | -- |
 | Camera Wide-Angle Lens | 1개 |
-| ------------ | -- |
 | Motor | 2개 |
-| ------------ | -- |
 | cooler | 2개 |
-| ------------ | -- |
 | Touch Pannel | 1개 |
