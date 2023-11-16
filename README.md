@@ -104,20 +104,20 @@ Free tier에서 사용가능한 최대한의 사용을 했다
 ## 사용법
 
 ### 서버
->AWS인스턴스를 구축한뒤 환경을 설정한다
->Server.py를 만들어 서버코드를 넣는다
->pyhon3 Server.py를 통해 서버를 실행시킨다
+1.AWS인스턴스를 구축한뒤 환경을 설정한다
+2.Server.py를 만들어 서버코드를 넣는다
+3.pyhon3 Server.py를 통해 서버를 실행시킨다
 
 ### 임베디드
->모듈들과 프레임을 구한다
->회로도에 맞게 회로를 구성한다
->vnc와 같은 원격 접속을 통해 Raspberry Pi에 접속
->Embedded폴더에 있는 코드를 사용한다
->python3 실행파일.py를 실행시킨다
+1.모듈들과 프레임을 구한다
+2.회로도에 맞게 회로를 구성한다
+3.vnc와 같은 원격 접속을 통해 Raspberry Pi에 접속
+4.Embedded폴더에 있는 코드를 사용한다
+5.python3 실행파일.py를 실행시킨다
 
 ### 안드로이드
->Andorid Studio를 설치후 Andorid 폴더에 있는 project를 연다
->코드 내부의 AWS와의 통신을 위한 부분을 자신의 AWS IP로 변경한다
->휴대폰의 관리자옵션을 On 한다
->컴퓨터와 휴대폰을 연결한뒤 Android Studio을 통해 설치 시킨다
->이후 회원가입 및 실행을 한다
+1.Andorid Studio를 설치후 Andorid 폴더에 있는 project를 연다
+2.코드 내부의 AWS와의 통신을 위한 부분을 자신의 AWS IP로 변경한다
+3.휴대폰의 관리자옵션을 On 한다
+4.컴퓨터와 휴대폰을 연결한뒤 Android Studio을 통해 설치 시킨다
+5.이후 회원가입 및 실행을 한다
