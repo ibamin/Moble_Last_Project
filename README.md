@@ -53,3 +53,26 @@ Free tier에서 사용가능한 최대한의 사용을 했다
     sudo swapon --show
   </code>
 </pre>
+
+을 통해 cache를 사용하지 않는 설치와 가상 메모리를 사용하는 방법으로 해결 할 수 있었고 
+<pre>
+  <code>
+    pip install openssh-server
+    pip install python3
+    pip install Flask
+    pip install dlib
+  </code>
+</pre>
+와 같은 모듈들을 설치하였다
+
+## Embedded
+
+--------------------------------------------------------------------------
+
+### 구성품
+| Rsapberry Pi | 2개 |
+| Camera Module | 1개 |
+| Camera Wide-Angle Lens | 1개 |
+| Motor | 2개 |
+| cooler | 2개 |
+| Touch Pannel | 1개 |
