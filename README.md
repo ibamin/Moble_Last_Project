@@ -1,4 +1,4 @@
-![image](https://github.com/ibamin/Moble_Last_Project/assets/96930294/2c9d0b9c-cd49-474e-98f1-2fd525788b2d)# Moble_Last_Project
+ Moble_Last_Project
 
 # 기획 이유
 [모블 라스트 프로젝트]
@@ -96,7 +96,7 @@ Free tier에서 사용가능한 최대한의 사용을 했다
 사용 모델 : ResNet + Dlib
 
 ### RseNet + Dlib 성능 평가
-<img src="/readme/2.png"></img>
+![image](https://github.com/ibamin/Moble_Last_Project/assets/96930294/2c9d0b9c-cd49-474e-98f1-2fd525788b2d)
 
 ------------------------------------------------------------------------
 
