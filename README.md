@@ -11,3 +11,43 @@ NFC, RFID로 통신하는 TV,LED패널등의 기기들이 멋대로 제어되는
 
 # 구축
 AWS 
+----------
+| ------ | -- | -- |
+| 운영체제 | 용량 | IOPS |
+| ------ | -- | -- |
+| Ubuntu | 30GB | 3000 |
+| ------ | -- | -- |
+
+Free tier에서 사용가능한 최대한의 사용을 했다
+하지만 torch를 설치하는 부분에서의 cache를 과다 사용하여 용량을 버티지 못하는지 지속하여 인스턴스가
+꺼지는 문제가 발생했다.
+
+<pre>
+  <code>
+    pip install --no-cache-dir torch torchvision
+  </code>
+</pre>
+
+과
+
+<pre>
+  <code>
+    #스왑 파일 생성
+    sudo fallocate -l 2G /swapfile
+
+    sudo chmode 600 /swapfile
+    sudo chown root:root /swapfile
+
+    #스왑 설정
+    sudo mkswap /swapfile
+
+    #스왑 메모리 고정
+    echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+
+    #스왑 활성화
+    sudo swapon /swapfile
+
+    #스왑 확인
+    sudo swapon --show
+  </code>
+</pre>
